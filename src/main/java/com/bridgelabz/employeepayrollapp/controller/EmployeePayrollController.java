@@ -16,7 +16,6 @@ import java.util.List;
 @RequestMapping("/employeepayrollservice")
 public class EmployeePayrollController {
     @Autowired
-
     private IEmployeePayrollService employeePayrollService;
 
     //localhost:8080/employeepayrollservice/get
@@ -24,8 +23,8 @@ public class EmployeePayrollController {
     public ResponseEntity<Responsedto> getEmployeePayrollData() {
         List<EmployeePayrollData> employeeDataList = null;
         employeeDataList = employeePayrollService.getEmployeePayrollData();
-        Responsedto responseDTO = new Responsedto("Get Call Success", employeeDataList);
-        return new ResponseEntity<Responsedto>(responseDTO, HttpStatus.OK);
+        Responsedto responsedto = new Responsedto("Get Call Success", employeeDataList);
+        return new ResponseEntity<Responsedto>(responsedto, HttpStatus.OK);
     }
 
     //localhost:8080/employeepayrollservice/get/1
