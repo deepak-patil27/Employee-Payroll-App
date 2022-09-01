@@ -3,6 +3,7 @@ package com.bridgelabz.employeepayrollapp.model;
 import com.bridgelabz.employeepayrollapp.dto.EmployeePayrolldto;
 import lombok.Data;
 
+
 @Data
 public class EmployeePayrollData {
     private int employeeId;
