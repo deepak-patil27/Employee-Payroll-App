@@ -10,5 +10,6 @@ public class Responsedto {
     public Responsedto(String message, Object data) {
         this.message = message;
         this.data = data;
+
     }
 }

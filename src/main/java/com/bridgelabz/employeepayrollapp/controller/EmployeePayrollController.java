@@ -17,45 +17,43 @@ import java.util.List;
 public class EmployeePayrollController {
     @Autowired
     private IEmployeePayrollService employeePayrollService;
-
     //localhost:8080/employeepayrollservice/get
     @RequestMapping(value = {"", "/", "/get"})
     public ResponseEntity<Responsedto> getEmployeePayrollData() {
-        List<EmployeePayrollData> employeeDataList = null;
-        employeeDataList = employeePayrollService.getEmployeePayrollData();
-        Responsedto responsedto = new Responsedto("Get Call Success", employeeDataList);
-        return new ResponseEntity<Responsedto>(responsedto, HttpStatus.OK);
+        List<EmployeePayrollData> employeePayrollDataList = null;
+        employeePayrollDataList = employeePayrollService.getEmployeePayrollData();
+        Responsedto respdto = new Responsedto("Get call Success", employeePayrollDataList);
+        return new ResponseEntity<Responsedto>(respdto, HttpStatus.OK);
     }
-
     //localhost:8080/employeepayrollservice/get/1
     @GetMapping("/get/{empId}")
-    public ResponseEntity<Responsedto> getEmployeePayrollData(@PathVariable("empId") int empId) {
-        EmployeePayrollData employeePayrollData = employeePayrollService.getEmployeePayrollDataById(empId);
-        Responsedto respdto = new Responsedto("Get Call for ID Successfully", employeePayrollData);
+    public ResponseEntity<Responsedto> getEmployeePayrollData(@PathVariable(value = "empId") int empId) {
+        EmployeePayrollData employeePayrollData = null;
+        employeePayrollData=employeePayrollService.getEmployeePayrollDataById(empId);
+        Responsedto respdto = new Responsedto("Get Call Success for Id successful ", employeePayrollData);
         return new ResponseEntity<Responsedto>(respdto, HttpStatus.OK);
     }
-
     //localhost:8080/employeepayrollservice/create
     @PostMapping("/create")
-    public ResponseEntity<Responsedto> addEmployeePayrollData(@RequestBody EmployeePayrolldto employeePayrolldto) {
-        EmployeePayrollData employeePayrollData = employeePayrollService.createEmployeePayrollData(employeePayrolldto);
-        Responsedto respdto = new Responsedto("Created Employee Payroll Data Successfully", employeePayrollData);
-        return new ResponseEntity<Responsedto>(respdto, HttpStatus.OK);
+    public ResponseEntity<Responsedto> addEmployeePayrollData(@RequestBody EmployeePayrolldto empPayrolldto) {
+        EmployeePayrollData employeePayrollData = null;
+        employeePayrollData = employeePayrollService.createEmployeePayrollData(empPayrolldto);
+        Responsedto responsedto = new Responsedto("Created employee Payroll data successfully", employeePayrollData);
+        return new ResponseEntity<>(responsedto, HttpStatus.OK);
     }
-
-    //localhost:8080/employeepayrollservice/update/1
+    //localhost:8080/employeepayrollservice/update/2
     @PutMapping("/update/{empId}")
-    public ResponseEntity<Responsedto> updateEmployeePayrollData(@PathVariable("empId") int empId, @RequestBody EmployeePayrolldto employeePayrolldto) {
-        EmployeePayrollData employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId, employeePayrolldto);
-        Responsedto respdto = new Responsedto("Updated Employee Payroll Data Successfully", employeePayrollData);
-        return new ResponseEntity<Responsedto>(respdto, HttpStatus.OK);
+    public ResponseEntity<Responsedto> updateEmployeePayrollData(@PathVariable int empId,@RequestBody EmployeePayrolldto empPayrolldto) {
+        EmployeePayrollData employeePayrollData = null;
+        employeePayrollData = employeePayrollService.updateEmployeePayrollData(empId,empPayrolldto);
+        Responsedto responsedto = new Responsedto("Updated employee Payroll data successfully", employeePayrollData);
+        return new ResponseEntity<>(responsedto, HttpStatus.OK);
     }
-
     //localhost:8080/employeepayrollservice/delete/1
     @DeleteMapping("/delete/{empId}")
     public ResponseEntity<Responsedto> deleteEmployeePayrollData(@PathVariable("empId") int empId) {
         employeePayrollService.deleteEmployeePayrollData(empId);
-        Responsedto respdto = new Responsedto("Deleted Successfully", " Deleted Id: " + empId);
-        return new ResponseEntity<Responsedto>(respdto, HttpStatus.OK);
+        Responsedto responsedto = new Responsedto("Deleted successfully","Deleted id: "+empId);
+        return new  ResponseEntity<>(responsedto,HttpStatus.OK);
     }
 }
