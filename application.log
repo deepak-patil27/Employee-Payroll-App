@@ -1,0 +1,24 @@
+2022-09-01 20:23:48.196  INFO 4272 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Starting EmployeePayrollAppApplication using Java 18.0.2.1 on Deepak-patil with PID 4272 (E:\Bridgelab Tasks CFP\Day 4\EmployeePayrollApp\target\classes started by mrdee in E:\Bridgelab Tasks CFP\Day 4\EmployeePayrollApp)
+2022-09-01 20:23:48.359 DEBUG 4272 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Running with Spring Boot v2.7.3, Spring v5.3.22
+2022-09-01 20:23:48.360  INFO 4272 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : No active profile set, falling back to 1 default profile: "default"
+2022-09-01 20:23:49.413  INFO 4272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-09-01 20:23:49.415  INFO 4272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-09-01 20:23:55.129  INFO 4272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-09-01 20:23:55.157  INFO 4272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2022-09-01 20:24:01.481  INFO 4272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-09-01 20:24:01.513  INFO 4272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-09-01 20:24:01.513  INFO 4272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-09-01 20:24:02.275  INFO 4272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-09-01 20:24:02.275  INFO 4272 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 12855 ms
+2022-09-01 20:24:03.384  INFO 4272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-09-01 20:24:12.632  INFO 4272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-09-01 20:24:22.105  INFO 4272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-09-01 20:24:22.223  WARN 4272 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-09-01 20:24:27.998  WARN 4272 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-09-01 20:24:28.524  INFO 4272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-09-01 20:24:29.778  INFO 4272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-09-01 20:24:29.844  INFO 4272 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Started EmployeePayrollAppApplication in 46.245 seconds (JVM running for 83.17)
+2022-09-01 20:24:29.844  INFO 4272 --- [restartedMain] c.b.e.EmployeePayrollAppApplication      : Employee Payroll Service Application Started
+2022-09-01 20:46:27.324  WARN 4272 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=58s555ms123µs700ns).
+2022-09-01 20:47:45.498  WARN 4272 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m22s69ms132µs900ns).
+2022-09-01 22:12:40.936  WARN 4272 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=51s326ms166µs400ns).
